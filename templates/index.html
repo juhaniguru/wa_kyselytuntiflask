@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Esimerkin etusivu</title>
+
+    <style>
+        .leipateksti {
+            font-size: x-large;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Hei</h1>
+
+    <p class="leipateksti">Tämä sivu näkyy selaimessa, koska Flask serveri kuuntelee liikennettä osoitteessa <b>http://localhost:5005</b>
+        ja <i>index()</i>-routehandlerfunktio on kiinnitetty routeen <i>/</i>.</p>
+
+        <p class="leipateksti">Kun menet selaimella osoitteeseen <i>http://localhost:5005/</i>, Flask suorittaa <strong>index()</strong>-funktion.
+
+        <i>index-funktiossa</i> on sisällä <strong>return render_template('index.html')</strong></p>
+
+        <p class="leipateksti">
+            <i>index.html</i> on tämä sivu. Eli käyttämällä <i>render_template</i>-funktiota flask palauttaa selaimelle
+            parametrinä annetun html-sivun sisällön
+        </p>
+
+        <p class="leipateksti">
+            Kun menet selaimella routeen, johon on kiinnitetty Flaskin routehandler-fuktio, serveri (Flask) ottaa sisääntulevasta http-pyynnöstä kopin ja funktio palauttaa http-vastauksen takaisin palvelimelle
+            Perusperiaate on siis täysin sama kuin eka tunneilla käytetyssä omassa TCP-serverissä, mutta moni asia, mikä piti omassa TCP-serverissä koodata itse, tapahtuu Flaskissa automaattisesti
+        </p>
+
+</body>
+</html>
